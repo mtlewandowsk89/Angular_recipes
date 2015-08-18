@@ -1,0 +1,27 @@
+{{#each this}}
+<div class="recipe-media">
+
+	<div class="graph"> 
+		<div class="home" data-id="{{id}}">
+			<div class="graphic">
+				<input type="text" value="{{difficulty}}">
+			</div>
+		</div><p>Difficulty (out of 5)<p>
+	</div>
+	<div style="background: url({{img}}) no-repeat center; 
+	background-size: 100% 100%;"
+	class="recipe-pic"></div>
+	<div data-id="{{id}}" class="directions">
+		<p>{{name}}</p><hr>
+		<p><div style="color:black">Ingredients:</div> {{ingredients}}</p>
+		<p><div style="color:black">Directions:</div> {{directions}}</p>
+		<p><div style="color:black; display:inline-block">Cooking time:</div> {{cookingTime}} minutes</p>
+		<span><a href="/#/recipeList/{{id}}/edit">Edit</a> |
+			<a href="/#/recipeList/{{id}}/delete" class="check" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
+		</span>
+	</div>
+</div>
+{{/each}}
+
+
+

@@ -1,0 +1,56 @@
+{
+  "name": "finalproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Lewandowski",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "browserify-shim": "^3.8.10",
+    "gulp": "^3.9.0",
+    "gulp-serve": "^1.0.0",
+    "gulp-util": "^3.0.6",
+    "hbsfy": "^2.2.1",
+    "json-server": "^0.7.25",
+    "rimraf": "^2.4.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "backbone": "^1.2.1",
+    "handlebars": "^3.0.3",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1"
+  },
+  "browser": {
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js",
+    "jquery": "./node_modules/jquery/dist/jquery.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "hbsfy"
+    ]
+  },
+  "browserify-shim": {
+    "backbone": {
+      "depends": [
+        "jquery:jQuery",
+        "underscore:_"
+      ],
+      "exports": "Backbone"
+    },
+    "bootstrap": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "jquery": "jQuery",
+    "underscore": {
+      "exports": "_"
+    }
+  }
+}

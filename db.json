@@ -1,0 +1,49 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "img": "./images/chicken.jpg",
+      "name": "recipe1",
+      "ingredients": "bacon, chicken",
+      "directions": "heat water",
+      "cookingTime": "0-10",
+      "difficulty": 3
+    },
+    {
+      "id": 2,
+      "img": "./images/pork.jpg",
+      "name": "recipe2",
+      "ingredients": "salt, sugar",
+      "directions": "cool water",
+      "cookingTime": 30,
+      "difficulty": 2
+    },
+    {
+      "id": 3,
+      "img": "./images/steak.jpg",
+      "name": "recipe3",
+      "ingredients": "steak, sauce",
+      "directions": "cook the steak, eat it",
+      "cookingTime": 45,
+      "difficulty": 1
+    },
+    {
+      "name": "Chicken a la mode",
+      "ingredients": "chicken, ice cream",
+      "directions": "put the ice cream on the chicken",
+      "cookingTime": "over 60",
+      "difficulty": 5,
+      "img": "http://lorempixel.com/300/300/food",
+      "id": 5
+    },
+    {
+      "name": "roast duck",
+      "ingredients": "duck, salt, roast",
+      "directions": "do some cooking stuff",
+      "cookingTime": "21-30",
+      "difficulty": 3,
+      "img": "http://lorempixel.com/300/300/food/6",
+      "id": 6
+    }
+  ]
+}
