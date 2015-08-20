@@ -10,7 +10,16 @@ var SignUp = Backbone.View.extend({
   render: function () {
     var _this = this;
       _this.$el.html(signUpTemplate());
-    }
+  },
+
+  events: {
+  	"submit form.newUser": "newUser"
+  },
+
+  newUser: function (e) {
+  	e.preventDefault();
+  	App.router.navigate('#', { trigger: true });
+  }
 });
 
 module.exports = SignUp;

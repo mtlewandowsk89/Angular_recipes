@@ -50,6 +50,7 @@ body {
 	float: left;
 	height: 75px;
 	text-align: center;
+	font-size: 20pt;
 	line-height: 75px;
 	width: 15%;
 	background-color: rgb(141, 99, 57);
@@ -77,12 +78,44 @@ body {
 }
 
 .search input {
+	padding: 0 10px;
 	width: 100%;
 	border: none;
 	height: 75px;
 	color: white;
 	font-size: 20pt;
 	background-color: rgb(184, 141, 99);
+}
+
+.sorry {
+	text-align: center;
+	font-size: 24pt;
+	margin-top: 40px;
+	color: white;
+}
+
+.contribute {
+	margin-top: 460px;
+	color: rgb(130, 66, 30);
+}
+
+.borderDiv {
+	margin: 0 auto;
+	padding: 0;
+	width: 1000px;
+	border: 3px solid black;
+}
+
+.hunger {
+	position: absolute;
+    bottom: 200px;
+    z-index: -1;
+    height: 600px;
+    width: 1000px;
+    margin: auto;
+    padding: 10px 0;
+    right: 0px;
+    left: 0px;
 }
 
 ::-webkit-input-placeholder {
@@ -93,12 +126,11 @@ body {
 	width: 25%;
 	background-color: rgb(192, 113, 68);
 	color: white;
+	font-size: 20pt;
 }
 
 .login a {
-	padding: 0 20px;
 	display: inline-block;
-	min-width: 161.75px;
 }
 
 .banner {
@@ -110,14 +142,26 @@ body {
 
 .hero {
 	height: 600px;
+	margin: 0 auto;
+	max-width: 1500px;
 	background-image: url("/images/kitchen.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
+.welcome {
+	float: left;
+	height: 75px;
+  	line-height: 75px;
+	text-align: center;
+	width: 25%;
+	background-color: rgb(192, 113, 68);
+	color: white;
+}
+
 .headline {
 	font-family: Montserrat;
-	font-size: 26pt;
+	font-size: 50pt;
 	color: white;
 	padding-top: 60px;
 	margin-left: 50px;
@@ -130,16 +174,16 @@ body {
 
 .peek {
 	margin-left: 100px;
-	margin-top: 350px;
-	border: 1px solid white;
+	margin-top: 250px;
+	border: 3px solid white;
 	border-radius: 50px;
 	background-color: none;
-	width: 150px;
-	height: 50px;
+	width: 200px;
+	height: 75px;
 	cursor: pointer;
 	color: white;
 	font-family: Montserrat;
-	font-size: 14pt;
+	font-size: 18pt;
 	text-align: center;
 }
 
@@ -157,24 +201,29 @@ body {
 }
 
 
-.chicken {
+.tiles .chicken {
 	background-image: url("/images/chicken.jpg");
+	background-size: cover;
 }
 
-.beef {
+.tiles .beef {
 	background-image: url("/images/steak.jpg");
+	background-size: cover;
 }
 
-.seafood {
+.tiles .seafood {
 	background-image: url("/images/seafood.jpg");
+	background-size: cover;
 }
 
-.pork {
+.tiles .pork {
 	background-image: url("/images/pork.jpg");
+	background-size: cover;
 }
 
-.vegetarian {
+.tiles .vegetarian {
 	background-image: url("/images/salad.jpg");
+	background-size: cover;
 }
 
 .type {
@@ -188,8 +237,9 @@ body {
 	height: 100px;
 	text-align: center;
   	line-height: 100px;
+  	font-size: 18pt;
 	display: inline-block;
-	margin: 0px 12.8%;
+	margin: 0px 11.1%;
 } 
 
 .image {
@@ -235,9 +285,26 @@ footer {
 		height: 100px;
 		text-align: center;
 	  	line-height: 100px;
+	  	font-size: 16pt;
 		display: inline-block;
-		margin: 0px 12%;
+		margin: 0px 10.2%;
 	} 
+
+	.browse {
+		font-size: 18pt;
+	}
+
+	.login {
+		font-size: 18pt;
+	}
+
+	.headline {
+		font-family: Montserrat;
+		font-size: 26pt;
+		color: white;
+		padding-top: 60px;
+		margin-left: 50px;
+	}
 	
 	.image {
 		height: 185px;
@@ -252,6 +319,21 @@ footer {
 		color: white;
 	}
 
+	.peek {
+		margin-left: 100px;
+		border: 1px solid white;
+		border-radius: 50px;
+		background-color: none;
+		width: 150px;
+		height: 50px;
+		cursor: pointer;
+		color: white;
+		font-family: Montserrat;
+		font-size: 14pt;
+		text-align: center;
+		margin-top: 300px;
+	}
+
 	.logo {
 		font-size: 24pt;
 	}
@@ -262,9 +344,18 @@ footer {
 		height: 100px;
 		text-align: center;
 	  	line-height: 100px;
+	  	font-size: 14pt;
 		display: inline-block;
-		margin: 0px 10.6%;
+		margin: 0px 9.8%;
 	} 
+
+	.browse {
+		font-size: 14pt;
+	}
+
+	.login {
+		font-size: 14pt;
+	}
 
 	.hero {
 		height: 600px;
@@ -295,10 +386,19 @@ footer {
 	.banner a {
 		height: 100px;
 		text-align: center;
+		font-size: 12pt;
 	  	line-height: 100px;
 		display: inline-block;
 		margin: 0px 9%;
 	} 
+
+	.browse {
+		font-size: 12pt;
+	}
+
+	.login {
+		font-size: 12pt;
+	}
 
 	.dropdown {
 		font-size: 10pt;
@@ -336,8 +436,8 @@ footer {
 .recipe-media {
 	overflow: hidden;
 	height: 300px;
-	margin-left: 100px;
-	margin-bottom: 70px;
+	max-width: 1500px;
+	margin: 0 2% 70px 10%;
 }
 
 .graph, .recipe-pic, .directions {
@@ -371,8 +471,10 @@ footer {
 
 .directions {
 	width: 40%;
-	padding: 10px;
+	height: 300px;
 	color: white;
+	font-size: 14pt;
+	padding: 10px;
 	background-color: rgb(184, 141, 99);
 	overflow-y: auto;
 	word-wrap: break-word;
@@ -380,14 +482,14 @@ footer {
 
 .directions p:first-child {
 	text-align: center;
-	font-size: 16pt;
+	font-size: 24pt;
+	margin: 5px;
 	color: rgb(130, 66, 30);
 }
 
 .directions span {
-	border: 1px solid white;
 	padding: 1px;
-	margin-left: 70%;
+	margin-left: 66%;
 }
 
 .rate {
@@ -412,8 +514,7 @@ responsive recipe-list
 		font-size: 10pt;
 		overflow: hidden;
 		height: 200px;
-		margin-left: 100px;
-		margin-bottom: 70px;
+		margin: 0 4% 70px 10%;
 	}
 
 	.graph, .recipe-pic, .directions {
@@ -440,9 +541,15 @@ responsive recipe-list
 		width: 200px;
 	}
 
+	.directions p:first-child {
+		font-size: 20pt;
+	}
+
 	.directions {
 		width: 40%;
 		padding: 10px;
+		height: 200px;
+		font-size: 12pt;
 		color: white;
 		background-color: rgb(184, 141, 99);
 		overflow-y: auto;
@@ -452,6 +559,10 @@ responsive recipe-list
 	.directions p {
 		margin: 0;
 	}
+
+	.directions span {
+		margin-left: 50%;
+	}
 }
 
 @media (max-width: 992px) {
@@ -459,8 +570,7 @@ responsive recipe-list
 		font-size: 10pt;
 		overflow: hidden;
 		height: 150px;
-		margin-left: 50px;
-		margin-bottom: 70px;
+		margin: 0 2% 70px 10%;
 	}
 
 	.graph, .recipe-pic, .directions {
@@ -486,10 +596,16 @@ responsive recipe-list
 	.directions {
 		width: 50%;
 		padding: 5px;
+		height: 150px;
+		font-size: 10pt;
 		color: white;
 		background-color: rgb(184, 141, 99);
 		overflow-y: auto;
 		word-wrap: break-word;
+	}
+
+	.directions p:first-child {
+		font-size: 20pt;
 	}
 
 	.recipe-pic {
@@ -506,8 +622,7 @@ responsive recipe-list
 		font-size: 8pt;
 		overflow: hidden;
 		height: 150px;
-		margin-left: 50px;
-		margin-bottom: 70px;
+		margin: 0 1% 70px 10%;
 	}
 
 	.graph, .recipe-pic, .directions {
@@ -534,14 +649,19 @@ responsive recipe-list
 		width: 40%;
 		padding: 5px;
 		color: white;
+		font-size: 10pt;
+		height: 150px;
 		background-color: rgb(184, 141, 99);
 		overflow-y: auto;
 		word-wrap: break-word;
 	}
 
+	.directions p:first-child {
+		font-size: 18pt;
+	}
+
 	.directions span {
-		border: 1px solid white;
-		margin-left: 60%;
+		margin-left: 50%;
 	}
 
 	.recipe-pic {
@@ -608,9 +728,10 @@ responsive recipe-list
     box-shadow: 
       inset 0 0 8px  rgba(0,0,0,0.1),
             0 0 16px rgba(0,0,0,0.1); 
-    padding: 15px;
+    padding: 8px;
     background: rgba(255,255,255,0.5);
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
+    font-size: 18pt;
 }
 
 .submit {
@@ -625,17 +746,17 @@ responsive recipe-list
 	margin-bottom: 10px;
 }
 
-img {
+.foodImage {
 	position: absolute;
     bottom: 0;
+    right: 0;
+    left: 0;
     z-index: -1;
     opacity: 0.3;
     height: 700px;
-    max-width: 1000px;
+    width: 1000px;
     margin: auto;
     padding: 10px;
-    right: 0px;
-    left: 0px;
 }
 
 /******************

@@ -10,7 +10,7 @@ var Home = Backbone.View.extend({
   render: function () {
     var _this = this;
       _this.$el.html(homeTemplate());
-  }
+  },
 });
 
 module.exports = Home;

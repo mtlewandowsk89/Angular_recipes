@@ -28,13 +28,17 @@ var AddRecipe = Backbone.View.extend({
   	"submit form.create": "submitCreate"
   },
 
-  submitCreate: function () {
+  submitCreate: function (e) {
+  	e.preventDefault();
+
   	var formData = {
   		name: $('form.create input[name="name"]').val(),
   		ingredients: $('form.create input[name="ingredients"]').val(),
   		directions: $('form.create input[name="directions"]').val(),
   		cookingTime: $('form.create select[name="cooking-time"]').val(),
-  		difficulty: $('form.create input[name="difficulty"]').val()
+  		difficulty: $('form.create input[name="difficulty"]').val(),
+      category: $('form.create select[name="protein"]').val(),
+      timestamp: Date.now()
   	};
 
   	if (!this.editMode) {
@@ -42,7 +46,7 @@ var AddRecipe = Backbone.View.extend({
 
   		App.Collections.recipe.create(formData, {
   			success: function (recipe) {
-  				App.router.navigate('/', { trigger: true });
+  				App.router.navigate('/recipeList', { trigger: true });
   			}
   		});
   	} else {
@@ -52,7 +56,6 @@ var AddRecipe = Backbone.View.extend({
   		});
   	}
 
-  	return false;
   }
 });
 

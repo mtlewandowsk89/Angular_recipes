@@ -3,9 +3,6 @@ var Backbone = require('backbone');
 var App = require('./app');
 var recipeCollection = require('./collections/recipe');
 
-
-
-
 var AboutUsView = require('./views/about-us');
 App.Views.AboutUs = new AboutUsView;
 
@@ -35,7 +32,8 @@ App.Router = Backbone.Router.extend({
     'cookware': 'cookware',
     'addRecipe': 'addRecipe',
     'recipeList/:id/edit': 'addRecipe',
-    'recipeList': 'recipeList',
+    'recipeList/byCategory/:category': 'recipeByCategory',
+    'recipeList(/:search)': 'recipeList',
     'login': 'login',
     'login/signup': 'signup',
     'recipeList/:id/delete': 'deleteRecipe',
@@ -62,8 +60,12 @@ App.Router = Backbone.Router.extend({
     });
   },
 
-  recipeList: function() {
-    App.Views.RecipeList.render();
+  recipeList: function(searchTerm) {
+    App.Views.RecipeList.render(searchTerm);
+  },
+
+  recipeByCategory: function(category) {
+    App.Views.RecipeList.render(category, true);
   },
 
   login: function () {
@@ -86,3 +88,23 @@ App.Router = Backbone.Router.extend({
 App.router = new App.Router;
 
 Backbone.history.start();
+
+$(function () {
+  $(".search").on('submit', function (e) {
+    e.preventDefault();
+    var input = $('#search').val()
+    App.router.navigate('/recipeList/' + input, ({ trigger: true }));
+    $("#search").val('')
+  })
+
+  $(".logout").on('click', function (e) {
+    e.preventDefault();
+    App.router.navigate('#', { trigger: true });
+    $('.option2').hide();
+    $('.option1').show();
+  })
+      
+})
+
+
+

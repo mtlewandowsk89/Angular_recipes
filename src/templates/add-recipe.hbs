@@ -1,9 +1,17 @@
-<img src="/images/food.jpg">
+<img class="foodImage" src="/images/food.jpg">
 <h1 class="creation-title">Tell us a little about your recipe</h1>
 <div class="recipe-add">
 	<form action="#" class="create">
 		<label for="recipe-name">Recipe Name: </label>
 		<input type="text" id="recipe-name" name="name" value="{{name}}" required><br>
+		<label for="protein">Protein Source: </label>
+		<select name="protein" id="protein" value="{{protein}}" required>
+			<option value="chicken">chicken</option>
+			<option value="beef">beef</option>
+			<option value="seafood">seafood</option>
+			<option value="vegetarian">vegetarian</option>
+			<option value="other">other</option>
+		</select><br>
 		<label for="ingredients">Ingredients (separated by commas): </label>
 		<input type="text" id="ingredients" name="ingredients" value="{{ingredients}}" required></textarea><br>
 		<label for="directions">Directions: </label>

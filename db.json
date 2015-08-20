@@ -7,6 +7,8 @@
       "ingredients": "bacon, chicken",
       "directions": "heat water",
       "cookingTime": "0-10",
+      "timestamp": 1439935767148,
+      "category": "chicken",
       "difficulty": 3
     },
     {
@@ -16,6 +18,8 @@
       "ingredients": "salt, sugar",
       "directions": "cool water",
       "cookingTime": 30,
+      "timestamp": 1439935767158,
+      "category": "pork",
       "difficulty": 2
     },
     {
@@ -25,6 +29,8 @@
       "ingredients": "steak, sauce",
       "directions": "cook the steak, eat it",
       "cookingTime": 45,
+      "timestamp": 1439935767168,
+      "category": "beef",
       "difficulty": 1
     },
     {
@@ -34,16 +40,96 @@
       "cookingTime": "over 60",
       "difficulty": 5,
       "img": "http://lorempixel.com/300/300/food",
+      "timestamp": 1439935767178,
+      "category": "chicken",
       "id": 5
     },
     {
-      "name": "roast duck",
-      "ingredients": "duck, salt, roast",
-      "directions": "do some cooking stuff",
-      "cookingTime": "21-30",
-      "difficulty": 3,
-      "img": "http://lorempixel.com/300/300/food/6",
+      "name": "grilled tilapia",
+      "ingredients": "tilapia, salt, pepper, butter",
+      "directions": "cook the tilapia",
+      "cookingTime": "11-20",
+      "difficulty": 2,
+      "timestamp": 1440088561110,
+      "img": "http://lorempixel.com/300/300/food/4",
+      "category": "seafood",
       "id": 6
+    },
+    {
+      "name": "chef salad",
+      "ingredients": "lettuce, tomato, onion, dressing, cheese",
+      "directions": "throw all ingredients in a bowl, mix together, add dressing at the end, mix again",
+      "cookingTime": "0-10",
+      "difficulty": 1,
+      "timestamp": 1440088643966,
+      "img": "http://lorempixel.com/300/300/food/10",
+      "category": "vegetarian",
+      "id": 7
+    },
+    {
+      "name": "turkey burgers",
+      "ingredients": "turkey, hamburger buns, bbq sauce",
+      "directions": "cook the burgers and put them in a bun",
+      "cookingTime": "11-20",
+      "difficulty": 2,
+      "category": "other",
+      "timestamp": 1440088791316,
+      "img": "http://lorempixel.com/300/300/food/2",
+      "id": 8
+    },
+    {
+      "name": "beef",
+      "ingredients": "beef",
+      "directions": "cook the beef",
+      "cookingTime": "0-10",
+      "difficulty": 2,
+      "category": "beef",
+      "timestamp": 1440093790340,
+      "img": "http://lorempixel.com/300/300/food/5",
+      "id": 9
+    },
+    {
+      "name": "sdg",
+      "ingredients": "sdfg",
+      "directions": "sdfg",
+      "cookingTime": "0-10",
+      "difficulty": 2,
+      "category": "beef",
+      "timestamp": 1440094043438,
+      "img": "http://lorempixel.com/300/300/food/8",
+      "id": 10
+    },
+    {
+      "name": "asdf",
+      "ingredients": "asdf",
+      "directions": "asdf",
+      "cookingTime": "0-10",
+      "difficulty": 1,
+      "category": "chicken",
+      "timestamp": 1440094224550,
+      "img": "http://lorempixel.com/300/300/food/10",
+      "id": 11
+    },
+    {
+      "name": "super long recipe title for testing stuff",
+      "ingredients": "sdf",
+      "directions": "sdf",
+      "cookingTime": "0-10",
+      "difficulty": 1,
+      "category": "chicken",
+      "timestamp": 1440102573005,
+      "img": "http://lorempixel.com/300/300/food/10",
+      "id": 12
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Matt",
+      "lastName": "Lewandowski",
+      "email": "mtlewandowsk@gmail.com",
+      "password": "bacon7233",
+      "timestamp": 1439935767123
     }
   ]
 }

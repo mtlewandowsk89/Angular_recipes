@@ -8,17 +8,18 @@
 		<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
 	</head>
 	<body>
 		<header class="header"> 
 			<div class="logo"><a href="#">Rookie Recipes</a></div>
 			<nav class="browse hvr-underline-from-center"><a href="/#/recipeList">Browse</a></nav>
-			<div class="search">
-				<form>
-					<input type="search" placeholder="Search..." name="search">
+			<div>
+				<form action="/#/recipeList" class="search">
+					<input type="search" id="search" placeholder="Search..." name="search">
 				</form>
 			</div>
-			<nav class="login hvr-underline-from-center"><a href="/#/login">Log In/Sign Up</a></nav>
+			<nav class="login hvr-underline-from-center"><div class="option1"><a href="/#/login">Log In/Sign Up</a></div><div class="option2" style="display: none">Matt | <a href="#" class="logout">Logout</a></div></nav>
 		</header>
 		<nav class="banner">
 			<a href="/#/cookware" class="hvr-bounce-in">Cookware</a>

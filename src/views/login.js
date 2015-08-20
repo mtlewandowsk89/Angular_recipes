@@ -10,7 +10,18 @@ var LogIn = Backbone.View.extend({
   render: function () {
     var _this = this;
       _this.$el.html(loginTemplate());
+  },
+
+  events: {
+  	"submit form.logIn": "logIn"
+  },
+
+  logIn: function (e) {
+  	e.preventDefault();
+  	App.router.navigate('#', { trigger: true });
+  	$('.option1').hide();
+  	$('.option2').show();
   }
-});
+})
 
 module.exports = LogIn;
