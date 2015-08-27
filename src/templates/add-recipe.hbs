@@ -1,11 +1,12 @@
 <img class="foodImage" src="/images/food.jpg">
-<h1 class="creation-title">Tell us a little about your recipe</h1>
+<h1 class="creation-title animated zoomIn">Tell us a little about your recipe</h1>
 <div class="recipe-add">
 	<form action="#" class="create">
 		<label for="recipe-name">Recipe Name: </label>
 		<input type="text" id="recipe-name" name="name" value="{{name}}" required><br>
 		<label for="protein">Protein Source: </label>
 		<select name="protein" id="protein" value="{{protein}}" required>
+			<option disabled selected value=""> select an option </option>
 			<option value="chicken">chicken</option>
 			<option value="beef">beef</option>
 			<option value="seafood">seafood</option>
@@ -18,6 +19,7 @@
 		<input type=text" id="directions" name="directions" value="{{directions}}" required></textarea><br>
 		<label for="cooking-time">Cooking Time</label>
 		<select name="cooking-time" id="cooking-time" value="{{cookingTime}}" required>
+			<option disabled selected value=""> select an option </option>
 			<option value="0-10">0-10 minutes</option>
 			<option value="11-20">11-20 minutes</option>
 			<option value="21-30">21-30 minutes</option>
@@ -28,7 +30,7 @@
 		</select><br>
 		<label for="difficulty">Difficulty (1 = easy, 5 = very difficult)</label>
 		<input type="number" min="1" max="5" id="difficulty" name="difficulty" value="{{difficulty}}" step="1" required><br>
-		<button class="submit" type="submit">Submit</button>
+		<button class="submit hvr-push" type="submit">Submit</button>
 	</form>
 </div>
 

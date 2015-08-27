@@ -64,36 +64,12 @@ var RecipeList = Backbone.View.extend({
 		  	displayInput: true,
 		  	max: 5,
 		  	readOnly: true,
-		  	fgColor:"black"
+		  	fgColor: "white",
+        bgColor: "rgba(76, 58, 40, 1)",
+        inputColor: "white"
       })
     });
   },
-
-  // events: {
-  // 	"click .check": "makeSure"
-  // },
-
-  // makeSure: function (e) {
- 
-  	// swal({   title: "Are you sure?",
-  	// 	text: "You will not be able to recover this recipe!",
-  	// 	type: "warning",
-  	//     showCancelButton: true,
-  	//     confirmButtonColor: "#DD6B55",
-   //      confirmButtonText: "Yes, delete it!",
-   //      cancelButtonText: "No, cancel!",
-   //      closeOnConfirm: false,
-   //      closeOnCancel: false 
-   //  },
-   //  function(isConfirm){
-   //      if (isConfirm) {
-   //          swal("Deleted!", "Your recipe has been deleted.", "success");
-   //      } else {
-   //          swal("Cancelled", "Your recipe is safe", "error");
-           
-   //      }
-   //  });
-  // }
   
 });
 

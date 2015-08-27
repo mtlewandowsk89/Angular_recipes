@@ -11,5 +11,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "smoke.js": "*",
+    "animate.css": "~3.4.0"
+  }
 }

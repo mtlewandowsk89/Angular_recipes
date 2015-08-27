@@ -1,19 +1,19 @@
 <img class="foodImage" src="/images/food.jpg">
 <h1 class="creation-title">Sign up and start cookin'</h1>
 <div class="login-page">
-	<form action="#" class="newUser">
+	<form action="#" class="userAdd">
 		<label for="first-name">First Name: </label>
-		<input type="text" id="first-name" name="first-name" required><br>
+		<input type="text" id="first-name" name="first-name" value="{{first-name}}" required><br>
 		<label for="last-name">Last Name: </label>
-		<input type="text" id="last-name" name="last-name" required><br>
+		<input type="text" id="last-name" name="last-name" value="{{last-name}}" required><br>
 		<label for="email">Email: </label>
-		<input type="email" id="email" name="email" required><br>
+		<input type="email" id="email" name="email" value="{{email}}" required><br>
 		<label for="password">Password: </label>
-		<input type="password" id="password" name="password" required><br>
+		<input type="password" id="password" name="password" value="{{password}}" required><br>
 		<label for="confirm">Confirm Password: </label>
-		<input type="password" id="confirm" name="confirm" required>
+		<input type="password" id="confirm" name="confirm" value="{{confirm}}" required>
 
-		<button class="submit" type="submit">Sign Up</button><br>
+		<button class="submit hvr-push" type="submit">Sign Up</button><br>
 		<a href="/#/login">Already have an account?</a>
 	</form>
 </div>

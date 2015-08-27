@@ -2,6 +2,7 @@ var Backbone = require('backbone');
 
 var App = require('./app');
 var recipeCollection = require('./collections/recipe');
+var userCollection = require('./collections/user');
 
 var AboutUsView = require('./views/about-us');
 App.Views.AboutUs = new AboutUsView;

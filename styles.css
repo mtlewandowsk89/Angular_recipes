@@ -19,13 +19,14 @@ a {
 	text-decoration: none;
 }
 
+body {
+	overflow-x: hidden;
+	margin: 0;
+}
+
 /**********************
 	Main page
 **********************/
-
-body {
-	margin: 0;
-}
 
 .header {
 	overflow: hidden;
@@ -69,7 +70,6 @@ body {
 }
 
 .search {
-	/*padding-top: 26px;*/
 	float: left;
 	height: 75px;
 	text-align: center;
@@ -90,24 +90,24 @@ body {
 .sorry {
 	text-align: center;
 	font-size: 24pt;
-	margin-top: 40px;
+	margin-top: 110px;
 	color: white;
 }
 
 .contribute {
-	margin-top: 460px;
+	margin-top: -200px;
 	color: rgb(130, 66, 30);
 }
 
 .borderDiv {
 	margin: 0 auto;
 	padding: 0;
-	width: 1000px;
+	width: 1005px;
 	border: 3px solid black;
 }
 
 .hunger {
-	position: absolute;
+	position: relative;
     bottom: 200px;
     z-index: -1;
     height: 600px;
@@ -163,6 +163,7 @@ body {
 	font-family: Montserrat;
 	font-size: 50pt;
 	color: white;
+	text-shadow: 0px 0px 20px black;
 	padding-top: 60px;
 	margin-left: 50px;
 }
@@ -178,6 +179,8 @@ body {
 	border: 3px solid white;
 	border-radius: 50px;
 	background-color: none;
+	text-shadow: 0px 0px 20px black;
+	box-shadow: 0px 0px 20px black;
 	width: 200px;
 	height: 75px;
 	cursor: pointer;
@@ -251,7 +254,9 @@ body {
 .tiles {
 	border: 3px solid rgb(184, 141, 99);
 	margin-left: 1.4%;
+	margin-bottom: 100px;
 	width: 210px;
+	box-shadow: 0px 0px 10px rgb(108, 67, 12);
 	display: inline-block;
 	color: white;
 }
@@ -259,7 +264,7 @@ body {
 footer {
 	width: 100%;
 	background-color: rgb(184, 141, 99);
-	font-size: 14pt;
+	font-size: 18pt;
 	position:fixed;bottom:0;left:0;right:0;height:60px;
 	line-height: 60px;
 }
@@ -677,8 +682,9 @@ responsive recipe-list
 	about-us template
 **********************/
 
-.what-we-do {
+.what-we-do, .origin, .firstFlip, .secondFlip, .thirdFlip{
 	text-align: center;
+	font-size: 32pt;
 	color: rgb(130, 66, 30);
 }
 
@@ -686,13 +692,51 @@ responsive recipe-list
 	padding: 10px;
 	width: 80%;
 	margin-left: 10%;
+	margin-bottom: 100px;
+	box-shadow: 0px 0px 15px rgb(108, 67, 12);
 	background-color: rgb(184, 141, 99);
-	font-size: 14pt;
+	font-size: 26pt;
 	color: white;
+	position: relative;
 }
 
-.info-box > :first-child {
+.info-box > :first-child, .info-box > :last-child{
 	text-align: center;
+}
+
+.cookTools {
+	position: absolute;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 50px;
+    width: 50%;
+    height: 45%;
+}
+
+.recommendations li:hover, .recommendations li.active{
+	cursor: pointer;
+	color: rgb(130, 66, 30);
+}
+
+.Flips {
+	text-align: center;
+	animation-delay: 12s;
+}
+
+.origin {
+	animation-delay: 2s;
+}
+
+.firstFlip {
+	animation-delay: 4s;
+}
+
+.secondFlip {
+	animation-delay: 6s;
+}
+
+.thirdFlip {
+	animation-delay: 8s;
 }
 
 /***********************************
@@ -708,6 +752,7 @@ responsive recipe-list
     width: 300px;
 	position: relative;
 	overflow: hidden;
+	font-size: 12pt;
     clear: both;
     margin: auto;
     display: block;
@@ -720,14 +765,14 @@ responsive recipe-list
     resize: none;
      border: 5px solid rgb(184, 141, 99); 
     -webkit-box-shadow: 
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1); 
+      inset 0 0 8px  rgba(0,0,0,0.2),
+            0 0 16px rgba(0,0,0,0.2); 
     -moz-box-shadow: 
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1); 
+      inset 0 0 8px  rgba(0,0,0,0.2),
+            0 0 16px rgba(0,0,0,0.2); 
     box-shadow: 
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1); 
+      inset 0 0 8px  rgba(0,0,0,0.2),
+            0 0 16px rgba(0,0,0,0.2); 
     padding: 8px;
     background: rgba(255,255,255,0.5);
     margin: 0 0 12px 0;
@@ -818,6 +863,48 @@ responsive recipe-list
   right: 0;
 }
 
+@-webkit-keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 
-/*background: radial-gradient(rgba(20, 100, 100, 0.5), rgba(0, 125, 150, 0.9)), url("");*/
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.hvr-push {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-push:hover, .hvr-push:focus, .hvr-push:active {
+  -webkit-animation-name: hvr-push;
+  animation-name: hvr-push;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+

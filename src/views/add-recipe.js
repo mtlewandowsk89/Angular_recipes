@@ -3,7 +3,7 @@ var Backbone = require('backbone');
 var addRecipeTemplate = require('../templates/add-recipe.hbs');
 
 var App = require('../app');
-var Recipe = require('../models/recipe');
+var Recipe = require('../models/recipe.js');
 
 var AddRecipe = Backbone.View.extend({
   el: $('main'),
@@ -42,8 +42,11 @@ var AddRecipe = Backbone.View.extend({
   	};
 
   	if (!this.editMode) {
-  		formData.img = 'http://lorempixel.com/300/300/food/'+ Math.floor((Math.random() * 10) + 1)
-
+  		if($(formData.name).val('Hamburgers')) {
+        formData.img = '../images/hamburger.jpg'
+          } else {
+        formData.img = 'http://lorempixel.com/300/300/food/'+ Math.floor((Math.random() * 10) + 1)
+      }
   		App.Collections.recipe.create(formData, {
   			success: function (recipe) {
   				App.router.navigate('/recipeList', { trigger: true });
