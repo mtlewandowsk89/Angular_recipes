@@ -144,7 +144,7 @@ body {
 	height: 600px;
 	margin: 0 auto;
 	max-width: 1500px;
-	background-image: url("/images/kitchen.jpg");
+	background-image: url("./images/kitchen.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -205,27 +205,27 @@ body {
 
 
 .tiles .chicken {
-	background-image: url("/images/chicken.jpg");
+	background-image: url("./images/chicken.jpg");
 	background-size: cover;
 }
 
 .tiles .beef {
-	background-image: url("/images/steak.jpg");
+	background-image: url("./images/steak.jpg");
 	background-size: cover;
 }
 
 .tiles .seafood {
-	background-image: url("/images/seafood.jpg");
+	background-image: url("./images/seafood.jpg");
 	background-size: cover;
 }
 
 .tiles .pork {
-	background-image: url("/images/pork.jpg");
+	background-image: url("./images/pork.jpg");
 	background-size: cover;
 }
 
 .tiles .vegetarian {
-	background-image: url("/images/salad.jpg");
+	background-image: url("./images/salad.jpg");
 	background-size: cover;
 }
 
@@ -364,7 +364,7 @@ footer {
 
 	.hero {
 		height: 600px;
-		background-image: url("/images/kitchen.jpg");
+		background-image: url("./images/kitchen.jpg");
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -411,7 +411,7 @@ footer {
 
 	.hero {
 		height: 600px;
-		background-image: url("/images/kitchen.jpg");
+		background-image: url("./images/kitchen.jpg");
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -443,6 +443,16 @@ footer {
 	height: 300px;
 	max-width: 1500px;
 	margin: 0 2% 70px 10%;
+}
+
+.diffNum {
+	color: #fff;
+	font-size: 32px;
+	border: 5px solid #fff;
+	width: 50px;
+	height: 50px;
+	margin: 40px auto 0 auto;
+	border-radius: 50%;
 }
 
 .graph, .recipe-pic, .directions {
@@ -578,6 +588,10 @@ responsive recipe-list
 		margin: 0 2% 70px 10%;
 	}
 
+	.diffNum {
+		margin: 25px auto 0 auto;
+	}
+
 	.graph, .recipe-pic, .directions {
 		float: left;
 		height: 150px;
@@ -628,6 +642,10 @@ responsive recipe-list
 		overflow: hidden;
 		height: 150px;
 		margin: 0 1% 70px 10%;
+	}
+
+	.diffNum {
+		margin: 20px auto 0 auto;
 	}
 
 	.graph, .recipe-pic, .directions {

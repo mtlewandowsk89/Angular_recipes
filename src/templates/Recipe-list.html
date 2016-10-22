@@ -1,0 +1,24 @@
+
+<p><input type="text" hidden name="category" value="{{category}}" ng-model="test"></p>
+<div class="recipe-media" ng-repeat="x in recipes | orderBy:id | filter:{category:test}">
+	<div class="graph">
+		<div class="home" data-id="{{x.id}}">
+			<div class="diffNum">{{x.difficulty}}</div>
+		</div><p>Difficulty (out of 5)<p>
+	</div>
+	<div style="background: url({{x.img}}) no-repeat center; 
+	background-size: 100% 100%;"
+	class="recipe-pic"></div>
+	<div data-id="{{x.id}}" class="directions">
+		<p>{{x.name | lowercase}}</p><hr>
+		<p><div style="color:black">Ingredients:</div> {{x.ingredients | lowercase}}</p>
+		<p><div style="color:black">Directions:</div> {{x.directions | lowercase}}</p>
+		<p><div style="color:black; display:inline-block">Cooking time:</div> {{x.cookingTime}} minutes</p><br>
+		<span><a href="/#/recipeList/{{x.id}}/edit">Edit</a> |
+			<a href="/#/recipeList/{{x.id}}/delete" class="check" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
+		</span><br>
+	</div>
+</div>
+
+
+
