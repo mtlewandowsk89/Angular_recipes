@@ -776,6 +776,12 @@ responsive recipe-list
     display: block;
 }
 
+.formError {
+	color: red;
+	margin-top: 0;
+	display: none;
+}
+
 .recipe-add input, textarea, select, .login-page input{
     margin-bottom: 20px;
     width: 100%;
@@ -820,6 +826,18 @@ responsive recipe-list
     width: 1000px;
     margin: auto;
     padding: 10px;
+}
+
+/**********************
+	Angular classes
+**********************/
+
+input.ng-valid, select.ng-valid {
+	border-color: #5cb85c;
+}
+
+button:disabled {
+	cursor: not-allowed;
 }
 
 /******************

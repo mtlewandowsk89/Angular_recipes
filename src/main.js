@@ -14,7 +14,7 @@ app.config(function($routeProvider) {
   })
   .when("/addRecipe", {
     templateUrl: "src/templates/add-recipe.html",
-    controller: ""
+    controller: "addRecipeCtrl"
   })
   .when("/login", {
     templateUrl: "src/templates/login.html",
@@ -27,19 +27,14 @@ app.config(function($routeProvider) {
   .when("/recipeList/:category?", {
     templateUrl: "src/templates/Recipe-list.html",
     controller: "recipeCtrl"
+  })
+  .otherwise({
+    redirectTo: "/"
   });
 });
 
-app.controller('myCtrl', function($scope) {
-
-    
-});
-
-app.controller('recipeCtrl', function($scope, $routeParams) {
-    $scope.category = ($routeParams.category);
-    $scope.test = $scope.category;
-
-    $scope.recipes = [
+app.service('recipes', function() {
+    var recipes = [
       {id: 1, name: 'grilled tilapia', difficulty: 2, img: './images/tilapia.jpg', ingredients: 'tilapia, salt, pepper, butter', directions: 'cook the tilapia', cookingTime: '11-20', category: 'seafood'},
       {id: 2, name: 'chef salad', difficulty: 1, img: './images/chefSalad.jpg', ingredients: 'lettuce, tomato, onion, dressing, cheese', directions: 'throw all ingredients in a bowl, mix together, add dressing at the end, mix again', cookingTime: '0-10', category: 'vegetarian'},
       {id: 3, name: "Turkey burgers", ingredients: "1 lb ground turkey, 1 egg yolk, 2 tbsp barbecue sauce, 1 tbsp spicy brown mustard, 1 tsp worcestershire sauce, hamburger buns, choice of toppings", directions: "combine ground turkey, sauces, and egg yolk in mixing bowl. Mix until combined, do not over-mix. Form into patties approximately 1/2 inch think and 4 inches wide. Heat oiled skillet on medium high heat. Add turkey burgers and cook thoroughly until juices run clear. Put on buns and add choice of toppings.", cookingTime: "11-20", difficulty: 3, category: "other", img: "./images/turkeyB.jpg"},
@@ -50,6 +45,40 @@ app.controller('recipeCtrl', function($scope, $routeParams) {
       {id: 8, name: "Beef Enchiladas", ingredients: "1Lb ground beef, 2 cans enchilada sauce, 12 white corn tortillas, 1 cup mexican blend cheese, 1/4 cup finely chopped onion", directions: "Brown hamburger then add onion and 1/2 of cheese. Add 1/2 can of sauce. Cook for 5-10 minutes on medium low heat. Heat tortillas in microwave until warm and pliable. Spoon line of hamburger mixture into center of tortilla. Roll and place in baking dish with ends down. Repeat with rest of tortillas. Top with rest of enchilada sauce and cheese. Bake at 400 degrees covered for 40 mins, then uncovered for an additional 10 mins", cookingTime: "51-60", difficulty: 5, category: "beef", img: "./images/enchiladas.jpg"},
       {id: 9, name: "Shrimp teriyaki stir fry", ingredients: "1/2 lb deveined shrimp, 1/4 cup teriyaki sauce, frozen stir fry vegetable mix, 1/2 tsp minced ginger, 1 tsp minced garlic, 1 lb thin spaghetti pasta (cooked)", directions: "Cook shrimp in half of teriyaki sauce until thoroughly cooked. Remove from pan. Stir fry vegetables and the remaining teriyaki sauce. Add garlic and ginger and cook until vegetables soften. Add shrimp back in and toss with pasta and serve.", cookingTime: "21-30", difficulty: 3, category: "seafood", img: "./images/shrimp.jpg"},
     ];
+
+    return recipes;
+});
+
+app.controller('myCtrl', function($scope, $location) {
+  $('.search').submit(function(e) {
+    e.preventDefault();
+  });
+
+  $scope.location = $location;
+});
+
+app.controller('addRecipeCtrl', function($scope, $location, recipes, $window) {
+ $scope.recipe = {
+      name: '',
+      difficulty: '',
+      ingredients: '',
+      directions: '',
+      cookingTime: '',
+      category: '',
+      img: './images/noImage.gif'
+    };
+
+    $scope.addRecipe = function(recipe) {
+      recipes.push(recipe);
+      $window.location.href = '#recipeList';
+    };
+});
+
+app.controller('recipeCtrl', function($scope, $routeParams, $location, recipes) {
+    $scope.category = ($routeParams.category);
+    $scope.test = $scope.category;
+    $scope.search = $scope.recipeSearch;
+    $scope.recipes = recipes;
 });
 
 app.controller('cookwareCtrl', function($scope) {

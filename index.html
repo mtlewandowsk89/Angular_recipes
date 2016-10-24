@@ -20,8 +20,8 @@
 			<div class="logo"><a href="#/">Rookie Recipes</a></div>
 			<nav class="browse hvr-underline-from-center"><a href="#recipeList">Browse</a></nav>
 			<div>
-				<form action="#recipeList" class="search">
-					<input type="search" id="search" placeholder="Search..." name="search">
+				<form  action="#" class="search">
+					<input ng-show="location.path() == '/recipeList'" type="search" ng-model="recipeSearch" id="search" placeholder="Search..." name="search">
 				</form>
 			</div>
 			<nav class="login hvr-underline-from-center"><div class="option1"><a href="#login">Log In/Sign Up</a></div><div class="option2" style="display: none">Steve | <a href="#" class="logout">Logout</a></div></nav>
