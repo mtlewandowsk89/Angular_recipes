@@ -124,7 +124,7 @@ body {
 
 .login {
 	width: 25%;
-	background-color: rgb(192, 113, 68);
+	background-color: rgb(184, 141, 99);
 	color: white;
 	font-size: 20pt;
 }
@@ -135,7 +135,7 @@ body {
 
 .banner {
 	background-color: white;
-	height: 100px;
+	height: 65px;
 	color: rgb(130, 66, 30);
 }
 
@@ -239,7 +239,7 @@ body {
 .banner a {
 	height: 100px;
 	text-align: center;
-  	line-height: 100px;
+  	line-height: 65px;
   	font-size: 18pt;
 	display: inline-block;
 	margin: 0px 11.1%;
@@ -727,8 +727,8 @@ responsive recipe-list
     right: 0;
     margin-right: 20px;
     margin-top: 50px;
-    width: 50%;
-    height: 45%;
+    width: 40%;
+    height: 30%;
 }
 
 .recommendations li:hover, .recommendations li.active{

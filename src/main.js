@@ -6,7 +6,6 @@ app.config(function($routeProvider) {
   })
   .when("/aboutUs", {
     templateUrl: "src/templates/about-us.html",
-    controller: ""
   })
   .when("/cookware", {
     templateUrl: "src/templates/cookware.html",
@@ -15,14 +14,6 @@ app.config(function($routeProvider) {
   .when("/addRecipe", {
     templateUrl: "src/templates/add-recipe.html",
     controller: "addRecipeCtrl"
-  })
-  .when("/login", {
-    templateUrl: "src/templates/login.html",
-    controller: ""
-  })
-  .when("/login/signup", {
-    templateUrl: "src/templates/signup.html",
-    controller: ""
   })
   .when("/recipeList/:category?", {
     templateUrl: "src/templates/Recipe-list.html",
